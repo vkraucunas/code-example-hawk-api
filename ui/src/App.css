@@ -2,10 +2,64 @@ a {
   color: #00b9b3;
 }
 
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1e272a;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header .brand {
+  margin-bottom: 2rem;
+}
+
+header .add-hawk-button {
+  margin-bottom: 2rem;
+}
+
+header .pure-form-stacked .search-input[type='text'] {
+  margin-bottom: 0.25rem;
+}
+
+header select {
+  color: black;
+}
+
 main {
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+form {
+  width: 100%;
+}
+
+button {
+  min-width: 10rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.pure-form-stacked input[type='text'],
+.pure-form-stacked input[type='number'],
+.pure-form-stacked textarea,
+.pure-form-stacked select {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  min-width: 288px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
