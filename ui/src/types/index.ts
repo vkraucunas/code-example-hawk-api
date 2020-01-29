@@ -3,14 +3,18 @@ export interface Hawk {
   name: string;
   gender: string;
   size: string;
-  wingspanBegin?: string;
-  wingspanEnd?: string;
-  weightBegin?: string;
-  weightEnd?: string;
-  lengthBegin?: string;
-  lengthEnd?: string;
+  wingspanBegin?: number;
+  wingspanEnd?: number;
+  weightBegin?: number;
+  weightEnd?: number;
+  lengthBegin?: number;
+  lengthEnd?: number;
   colorDescription?: string;
   behaviorDescription?: string;
   habitatDescription?: string;
   pictureUrl?: string;
+}
+
+export interface StoreState {
+  hawks: Hawk[];
 }
