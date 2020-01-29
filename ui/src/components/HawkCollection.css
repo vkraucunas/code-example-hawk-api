@@ -1,0 +1,33 @@
+.hawkCollectionBlock {
+  padding: 3rem;
+}
+
+.hawkCollectionBlock h2 {
+  margin-bottom: 3rem;
+}
+
+.hawkCardBlock {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.hawkCard {
+  border: 1px solid #ccc;
+  width: 25%;
+  border-radius: 4px;
+  padding: 0 0 1rem;
+  margin: 0 1rem 1.5rem 0;
+}
+
+.hawkCardImg {
+  width: 100%;
+}
+
+.hawkCard .content {
+  padding: 1rem;
+}
+
+.hawkCard .content p {
+  margin-bottom: 1rem;
+}
