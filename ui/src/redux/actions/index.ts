@@ -1,8 +1,9 @@
-import { ActionCreator, Dispatch, AnyAction } from 'redux';
-import { ThunkAction } from 'redux-thunk';
+// import { ActionCreator, Dispatch, AnyAction } from 'redux';
+import { Dispatch } from 'redux';
+// import { ThunkAction } from 'redux-thunk';
 import axios from 'axios';
 import * as constants from '../constants';
-import { Hawk, StoreState } from '../../types';
+import { Hawk } from '../../types';
 
 const proxyUrl = 'http://localhost:5280';
 
@@ -33,7 +34,7 @@ export interface AddHawkAction {
 export const addHawk: any = (newHawk: Hawk) => {
   return async (dispatch: Dispatch) => {
     try {
-      const response: any = await axios.post(proxyUrl, newHawk);
+      await axios.post(proxyUrl, newHawk);
       dispatch(getAllHawks());
     } catch (err) {
       console.log(err);
