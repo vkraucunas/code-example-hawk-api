@@ -5,11 +5,26 @@ import { Hawk } from '../types';
 import { titleCase } from '../utils';
 import './HawkCollection.css';
 
-interface hawkProps {
+interface HawkProps {
+  hawks: Hawk[];
+  searchTerm: string;
+  nameSort: string;
+  sizeSort: string;
+  genderFilter: string;
+}
+
+interface HawkCollectionProps {
+  searchTerm: string;
+  nameSort: string;
+  sizeSort: string;
+  genderFilter: string;
+}
+
+interface HawkCardProps {
   hawks: Hawk[];
 }
 
-const HawkCards = (props: hawkProps): any => {
+const HawkCards = (props: HawkCardProps): any => {
   const hawks = props.hawks;
 
   const hawkCards = hawks.map((hawk) => (
@@ -31,27 +46,37 @@ const HawkCards = (props: hawkProps): any => {
   return <div className="flex-row wrap hawkCardBlock">{hawkCards}</div>;
 };
 
-class HawkCollection extends Component<hawkProps> {
+class HawkCollection extends Component<HawkProps, any> {
+  constructor(props: HawkProps) {
+    super(props);
+    console.log('hawks', props);
+    this.state = {
+      hawks: props.hawks
+    };
+  }
   render() {
     const { hawks } = this.props;
     return (
       <section className="hawkCollectionBlock">
         <h2>Your Hawks</h2>
-        {!hawks.length && (
+        {!hawks.length ? (
           <h3>
-            You have no hawks! Click the Add Hawk button to start your
-            collection!
+            <em>
+              You have no hawks! Click the Add Hawk button to start your
+              collection!
+            </em>
           </h3>
-        )}
-        {hawks.length && <HawkCards hawks={hawks} />}
+        ) : null}
+        {hawks.length ? <HawkCards hawks={hawks} /> : null}
       </section>
     );
   }
 }
 
-const mapStateToProps = (store: IAppState) => {
+const mapStateToProps = (store: IAppState, ownProps: HawkCollectionProps) => {
   return {
-    hawks: store.hawkState.hawks
+    hawks: store.hawkState.hawks,
+    ...ownProps
   };
 };
 
