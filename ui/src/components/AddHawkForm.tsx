@@ -35,7 +35,7 @@ export default class AddHawkForm extends Component<myProps, myState> {
   }
   handleSubmit(e: any) {
     e.preventDefault();
-    console.log('you submitted shit');
+    console.log('you submitted');
   }
   render() {
     const formObj = this.state.formObj;
