@@ -1,0 +1,39 @@
+.AddHawkModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddHawkModal .dialog {
+  position: relative;
+  background-color: white;
+  min-width: 62%;
+  max-height: 80vh;
+  padding: 3rem 6rem 2rem;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.AddHawkModal .dialog .exit-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border: none;
+  padding: 0.5rem;
+  min-width: auto;
+}
+
+.AddHawkModal .dialog h1 {
+  margin-bottom: 2rem;
+}
+
+.AddHawkModal .dialog form {
+  width: 60%;
+  max-width: 660px;
+}
