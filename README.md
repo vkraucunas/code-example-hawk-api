@@ -6,8 +6,7 @@ The goal of this project is for you to implement the UI screens to manage the ha
 The UI design is a single page app with two screens. Please
 reference the [screen mockups](Hawk%20Reference%20UI%20Mocks.pdf) for the design.
 
-**NOTE:** *The github pdf render is not very good, please download the PDF for proper viewing.*
-
+**NOTE:** _The github pdf render is not very good, please download the PDF for proper viewing._
 
 The `ui/` folder contains a stub of the Typescript/React/Redux based UI.
 
@@ -16,7 +15,6 @@ The UI mocks are purposefully low fidelity and should be interpreted for actual 
 and view design.
 
 Be creative and demonstrate your UI skills!
-
 
 ## Dependencies
 
@@ -44,8 +42,19 @@ Logs from the API server can be viewed by running `docker logs hawkapi -f`.
 docker-compose down
 ```
 
-## API Routes
+## Run UI Proxy
 
-See the [OpenAPI/Swagger](hawkapi-swagger-2.0.json) Spec for details.
+```
+npm run proxy
+```
 
-[Hawk Reference](https://www.allaboutbirds.org/news/search/?q=hawks)
+## Run UI
+
+```
+npm start
+```
+
+## UI Screenshots
+
+![main page](screenshot1.png)
+![add form page](screenshot2.png)
