@@ -59,9 +59,9 @@ npm start
 ### Completed Items
 
 - Pulls from the provided API. Added an express proxy to deal with CORS.
-- Wired in redux, and the Redux Dev Tools for Chrome
+- Wired in Redux, and the Redux Dev Tools for Chrome
 - Interpreted the wires into a card-based UI, and the form for adding more hawks became a modal.
-  - I went for a card based UI to be able to display the pictures, which I think provides better end result for the user
+  - I went for a card-based UI to be able to display the pictures, which I think provides a more visually robust result for the end user
 - Brought in a Google font and Pure CSS for some light out of the box styling, focused primarily on layout with the hand written styles
 
 ### Uncompleted Items
@@ -76,10 +76,11 @@ npm start
 
 ### Theoretical Next Steps
 
-- Obviously would have preferred to have completed the POST and added a few birds to this collection via the UI over Postman. I feel I was pretty close and missing something in the typing to make this possible. I saw in the Kotlin and docs that there appeared to be full CRUD routes available.
+- Obviously, I would have preferred to have completed the POST and added a few birds to this collection via the UI over Postman. I feel I was pretty close and missing something in the typing to make this possible. I saw in the Kotlin and docs that there appeared to be full CRUD routes available.
 - Searching, Filtering and Sorting the collection. I feel this could be completed with some utility functions on local state to the `HawkCollection` component with info handed down from `App`.
 - Had a few ideas for a `HawkDetail` view
-- Make the `AddHawkForm` a `HawkForm` that handles creation and editing
+- Convert the `AddHawkForm` to a `HawkForm` that handles creation and editing
+- A styling preprocessor like SCSS would be an improved dev experience as well
 - Would spend more time on accessibility and responsiveness
 
 ### UI Screenshots
