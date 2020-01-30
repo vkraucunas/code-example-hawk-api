@@ -80,7 +80,7 @@ npm start
 - Searching, Filtering and Sorting the collection. I feel this could be completed with some utility functions on local state to the `HawkCollection` component with info handed down from `App`.
 - Had a few ideas for a `HawkDetail` view
 - Convert the `AddHawkForm` to a `HawkForm` that handles creation and editing
-- A styling preprocessor like SCSS would be an improved dev experience as well
+- A styling preprocessor like Sass would be an improved dev experience as well
 - Would spend more time on accessibility and responsiveness
 
 ### UI Screenshots
