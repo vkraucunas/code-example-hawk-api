@@ -54,7 +54,35 @@ npm run proxy
 npm start
 ```
 
-## UI Screenshots
+## Summary
+
+### Completed Items
+
+- Pulls from the provided API. Added an express proxy to deal with CORS.
+- Wired in redux, and the Redux Dev Tools for Chrome
+- Interpreted the wires into a card-based UI, and the form for adding more hawks became a modal.
+  - I went for a card based UI to be able to display the pictures, which I think provides better end result for the user
+- Brought in a Google font and Pure CSS for some light out of the box styling, focused primarily on layout with the hand written styles
+
+### Uncompleted Items
+
+- POST, the form is in and capturing the user's input, there is the start of a redux action, there is a route laid in on the proxy to handle it (untested). Did not get to completing the task after encountering some typing issues with redux when trying to dispatch the `getAllHawks` action after a successful POST.
+- Searching, Filtering and Sorting on the primary UI. Again, is responding to user interaction, not doing much else
+
+### Challenges
+
+- I haven't written a React/Redux frontend in a couple years, so I had some catch up reading to do before starting and plenty of Googling throughout the work. I've never written one with TypeScript. I enjoy the benefits of TypeScript in Vue, but the nested generics around the actions were tough to decipher.
+- Finding reasonably current, reliable, complete, easy to follow information on writing a Redux store with TypeScript ended up being a bit of trick.
+
+### Theoretical Next Steps
+
+- Obviously would have preferred to have completed the POST and added a few birds to this collection via the UI over Postman. I feel I was pretty close and missing something in the typing to make this possible. I saw in the Kotlin and docs that there appeared to be full CRUD routes available.
+- Searching, Filtering and Sorting the collection. I feel this could be completed with some utility functions on local state to the `HawkCollection` component with info handed down from `App`.
+- Had a few ideas for a `HawkDetail` view
+- Make the `AddHawkForm` a `HawkForm` that handles creation and editing
+- Would spend more time on accessibility and responsiveness
+
+### UI Screenshots
 
 ![main page](screenshot1.png)
 ![add form page](screenshot2.png)
